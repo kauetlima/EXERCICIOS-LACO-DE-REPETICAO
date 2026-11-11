@@ -3,22 +3,25 @@
 Escreva um programa que solicite ao usuário um número inteiro que represente a quantidade de posições da sequência de Fibonacci que deverão ser exibidas. Em seguida, apresente a sequência até a posição informada.
  */
 
+void CalculaFibonacci(int numero)
+{
+    int a = 0;
+    int b = 1;
+    int c = 0;
+
+    for (int i=0; i <= numero; i++)
+    {
+        a = b;
+        b = c;
+        c = a + b;
+
+        Console.WriteLine("Numeros Fibonacci:" + b);
+    }
+}
 
 int num;
-int a = 0;
-int b = 1;
-int c = 0;
-
 
 Console.WriteLine("Digite a posição da sequencia de fibonacci que deseja: ");
 num = int.Parse(Console.ReadLine());
-
-for (int i = 0; i < num; i++)
-{
-    c = a;
-    a = b;
-    b = c + a;
-
-    Console.WriteLine(c);
-}
+CalculaFibonacci(num);
 
